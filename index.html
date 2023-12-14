@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <title>Frontend Mentor | Sunnyside agency landing page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <title>Sunnyside agency</title>
 </head>
 <body>
 <header>
-  <nav>
+  <nav class="navbar">
     <div class="left-menu">
       <img src="images/logo.svg" alt="sunnyside">
     </div>
@@ -17,7 +19,7 @@
         <li class="nav-link">About</li>
         <li class="nav-link">Services</li>
         <li class="nav-link">Projects</li>
-        <li class="nav-link">Contact</li>
+        <li class="nav-link contact">Contact</li>
       </ul>
     </div>
   </nav>
@@ -25,7 +27,7 @@
 <main>
   <div class="creatives-container">
     <h1 class="main-heading">We are creatives</h1>
-    <img src="images/icon-arrow-down.svg" alt="arrow">
+    <img src="images/icon-arrow-down.svg" class="middle-arrow" alt="arrow">
   </div>
   <div class="band-left">
     <h2 class="second-heading">Transform your brand</h2>
@@ -36,9 +38,7 @@
     <span class="learn-more">Learn more</span>
   </div>
   <div class="egg-right">
-
   </div>
-
   <div class="goblet-left">
 
   </div>
@@ -104,10 +104,11 @@
     <li class="footer-link">Contact</li>
   </ul>
   <ul class="social-icons">
-    <li>Facebook</li>
-    <li>Instagram</li>
-    <li>X</li>
-    <li>Pinterest</li>
+    <li><i class="fa fa-facebook-official" aria-hidden="true"></i></li>
+    <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+    <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+    <li><i class="fa fa-pinterest" aria-hidden="true"></i>
+    </li>
   </ul>
 </footer>
 </body>

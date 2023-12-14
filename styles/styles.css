@@ -1,0 +1,109 @@
+@font-face {
+    font-family: Barlow;
+    src: url('../fonts/Barlow-Black.ttf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Fraunces;
+    src: url("../fonts/Fraunces_9pt-Black.ttf");
+    font-weight: 700;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url("../images/desktop/image-header.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+.creatives-container {
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.main-heading {
+    text-align: center;
+    font-size: 64px;
+    font-family: Barlow, 'sans-serif';
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.social-icons {
+    list-style: none;
+}
+
+.creatives-container {
+    text-align: center;
+}
+
+.middle-arrow {
+    margin: 0 auto;
+    display: block;
+}
+
+.middle-arrow:hover {
+    cursor: pointer;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    font-size: 22px;
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-link {
+    padding: 16px;
+    margin-right: 20px;
+}
+
+.nav-link:hover {
+    color: #000000;
+    cursor: pointer;
+}
+
+.contact {
+    color: #000000;
+    border-radius: 32px;
+    background-color: #ffffff;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-weight: bold;
+    border: solid 2px transparent;
+}
+
+.contact:hover {
+    border: solid 2px #000000;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.left-menu {
+    width: 20%;
+    padding: 40px;
+}
+
+.left-menu img {
+    height: 42px;
+    max-width: 100%;
+}
+
+.right-menu {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+    margin-right: 40px;
+}
