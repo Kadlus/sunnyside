@@ -190,11 +190,19 @@ body {
 .graphic-design {
     width: 30%;
     padding: 40px;
+    background-image: url("../images/desktop/image-graphic-design.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
 }
 
 .photography {
     width: 30%;
     padding: 40px;
+    background-image: url("../images/desktop/image-photography.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
 }
 
 .design-photo-container {
@@ -203,6 +211,7 @@ body {
     height: 600px;
     text-align: center;
     justify-content: center;
+    align-items: center;
     padding: 50px;
 }
 
