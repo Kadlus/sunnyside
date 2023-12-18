@@ -21,7 +21,6 @@ body {
 .navbar {
     width: 100%;
     display: flex;
-    padding: 10px;
     align-items: center;
 }
 
@@ -29,7 +28,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 1600px;
+    height: 1430px;
 }
 
 .main-heading {
@@ -38,10 +37,6 @@ body {
     font-family: Barlow, 'sans-serif';
     color: #ffffff;
     text-transform: uppercase;
-}
-
-.social-icons {
-    list-style: none;
 }
 
 .creatives-container {
@@ -154,7 +149,7 @@ body {
     position: relative;
 }
 
-.learn-more::before {
+.band-left .learn-more::before {
     content: "";
     position: absolute;
     bottom: 1px;
@@ -162,6 +157,19 @@ body {
     width: 180px;
     height: 8px;
     background: hsl(51, 100%, 49%);
+    z-index: -1;
+    border-radius: 6px;
+    opacity: 0.5;
+}
+
+.stand-container .learn-more::before {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    left: -5%;
+    width: 180px;
+    height: 8px;
+    background: #f4d9d4;
     z-index: -1;
     border-radius: 6px;
     opacity: 0.5;
@@ -188,21 +196,25 @@ body {
 }
 
 .graphic-design {
-    width: 30%;
-    padding: 40px;
+    width: 50%;
     background-image: url("../images/desktop/image-graphic-design.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
 }
 
 .photography {
-    width: 30%;
-    padding: 40px;
+    width: 50%;
     background-image: url("../images/desktop/image-photography.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
 }
 
 .design-photo-container {
@@ -212,7 +224,6 @@ body {
     text-align: center;
     justify-content: center;
     align-items: center;
-    padding: 50px;
 }
 
 .graphic-heading {
@@ -224,3 +235,103 @@ body {
     font-weight: bold;
     color: hsl(198, 62%, 26%);
 }
+
+.client-container {
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+}
+
+.client-testamonial-heading {
+    text-align: center;
+    font-size: 42px;
+    color: #7e7f82;
+    margin-top: 200px;
+}
+
+.client-card {
+    text-align: center;
+    width: 30%;
+    margin: 50px;
+}
+
+.client-card img {
+    border-radius: 50%;
+}
+
+.client-desc {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    color: #7e7f82;
+    line-height: 2;
+}
+
+.client-name {
+    font-weight: bold;
+}
+
+.client-occupation {
+    color: hsl(213, 9%, 39%);
+}
+
+.gallery {
+    display: flex;
+    width: 100%;
+}
+
+.gallery-item {
+    width: 25%;
+    height: 100%;
+}
+
+.gallery-item img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.sunny-side-logo-heading {
+    background-color: black;
+}
+
+.main-footer {
+    margin-top: -5px;
+    padding-top: 50px;
+    background: #90d4c5;
+    padding-bottom: 50px;
+}
+
+.main-footer-logo {
+    text-align: center;
+}
+
+.main-footer-logo img {
+    max-width: 100%;
+    height: 100%;
+    padding: 30px;
+}
+
+.footer-links {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center
+}
+
+.footer-link {
+    padding: 20px;
+    color: #2d7464;
+    font-size: 18px;
+}
+
+.social-icons {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons .fa {
+    padding: 10px;
+    font-size: 24px;
+    color: #2d7464;
+}
+
