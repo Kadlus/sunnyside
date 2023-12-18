@@ -10,6 +10,14 @@
     font-weight: 700;
 }
 
+
+
+:root{
+    --white: #ffffff;
+    --black: #000000;
+    --grey: hsl(213, 9%, 39%);
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -35,7 +43,7 @@ body {
     text-align: center;
     font-size: 64px;
     font-family: Barlow, 'sans-serif';
-    color: #ffffff;
+    color: var(--white);
     text-transform: uppercase;
 }
 
@@ -57,7 +65,7 @@ body {
     list-style: none;
     display: flex;
     font-size: 22px;
-    color: #ffffff;
+    color: var(--white);
     padding: 0;
     margin: 0;
 }
@@ -68,14 +76,52 @@ body {
 }
 
 .nav-link:hover {
-    color: #000000;
+    color: var(--black);
     cursor: pointer;
 }
 
+/* Menu Icon */
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+    display: none;
+}/* Style label tag */
+
+.hamb-line {
+    background: var(--white);
+    display: block;
+    height: 4px;
+    position: relative;
+    width: 40px;
+
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+    background: var(--white);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 12px;
+}
+.hamb-line::after{
+    top: -12px;
+}
+
+.side-menu {
+    display: none;
+} /* Hide checkbox */
+
 .contact {
-    color: #000000;
+    color: var(--black);
     border-radius: 32px;
-    background-color: #ffffff;
+    background-color: var(--white);
     padding-left: 40px;
     padding-right: 40px;
     font-weight: bold;
@@ -83,9 +129,9 @@ body {
 }
 
 .contact:hover {
-    border: solid 2px #000000;
-    color: #ffffff;
-    background-color: #000000;
+    border: solid 2px var(--black);
+    color: var(--white);
+    background-color: var(--black);
 }
 
 .left-menu {
@@ -94,7 +140,7 @@ body {
 }
 
 .left-menu img {
-    height: 42px;
+    height: auto;
     max-width: 100%;
 }
 
@@ -138,7 +184,7 @@ body {
 
 .desc {
     font-size: 24px;
-    color: hsl(213, 9%, 39%);
+    color: var(--grey);
     font-family: Barlow, 'sans-serif';
 }
 
@@ -290,7 +336,7 @@ body {
 }
 
 .sunny-side-logo-heading {
-    background-color: black;
+    background-color: var(--black);
 }
 
 .main-footer {
@@ -335,3 +381,12 @@ body {
     color: #2d7464;
 }
 
+@media screen and (max-width: 800px) {
+    .right-menu {
+        display: none;
+    }
+    .hamb {
+        display: block;
+    }
+
+}
