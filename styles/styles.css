@@ -10,7 +10,9 @@
     font-weight: 700;
 }
 
-
+* {
+    scroll-behavior: smooth;
+}
 
 :root{
     --white: #ffffff;
@@ -32,35 +34,6 @@ body {
     align-items: center;
 }
 
-.creatives-container {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 1430px;
-}
-
-.main-heading {
-    text-align: center;
-    font-size: 64px;
-    font-family: Barlow, 'sans-serif';
-    color: var(--white);
-    text-transform: uppercase;
-}
-
-.creatives-container {
-    text-align: center;
-}
-
-.middle-arrow {
-    margin: 0 auto;
-    display: block;
-}
-
-.middle-arrow:hover {
-    cursor: pointer;
-}
-
-
 .nav-links {
     list-style: none;
     display: flex;
@@ -80,7 +53,6 @@ body {
     cursor: pointer;
 }
 
-/* Menu Icon */
 .hamb{
     cursor: pointer;
     float: right;
@@ -116,7 +88,15 @@ body {
 
 .side-menu {
     display: none;
-} /* Hide checkbox */
+}
+
+.right-menu {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+    margin-right: 40px;
+    transition: max-height .5s ease-out;
+}
 
 .contact {
     color: var(--black);
@@ -134,6 +114,34 @@ body {
     background-color: var(--black);
 }
 
+.creatives-container {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 1430px;
+}
+
+.main-heading {
+    text-align: center;
+    font-size: 64px;
+    font-family: Barlow, 'sans-serif';
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.creatives-container {
+    text-align: center;
+}
+
+.middle-arrow {
+    margin: 0 auto;
+    display: block;
+}
+
+.middle-arrow:hover {
+    cursor: pointer;
+}
+
 .left-menu {
     width: 20%;
     padding: 40px;
@@ -146,13 +154,6 @@ body {
 
 .left-menu img {
     transition: linear;
-}
-
-.right-menu {
-    display: flex;
-    justify-content: flex-end;
-    width: 80%;
-    margin-right: 40px;
 }
 
 .band-left {
@@ -169,7 +170,7 @@ body {
 
 .egg-right img {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .band-container {
@@ -232,7 +233,7 @@ body {
 
 .goblet-left img {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .audience-right {
@@ -369,6 +370,10 @@ body {
     font-size: 18px;
 }
 
+.footer-link:hover {
+    color: var(--black)
+}
+
 .social-icons {
     list-style: none;
     display: flex;
@@ -379,6 +384,10 @@ body {
     padding: 10px;
     font-size: 24px;
     color: #2d7464;
+}
+
+.social-icons .fa:hover {
+    color: var(--black);
 }
 
 @media screen and (max-width: 800px) {
