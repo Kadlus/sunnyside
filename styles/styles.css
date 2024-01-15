@@ -23,14 +23,22 @@
 body {
     padding: 0;
     margin: 0;
-    background-image: url("../images/desktop/image-header.jpg");
-    background-position: top;
-    background-repeat: no-repeat;
+}
+
+header {
+    position: relative;
+}
+
+#background-img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: -1;
 }
 
 .navbar {
-    width: 100%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -53,49 +61,21 @@ body {
     cursor: pointer;
 }
 
-.hamb{
-    cursor: pointer;
-    float: right;
-    padding: 40px 20px;
-    display: none;
-}/* Style label tag */
-
-.hamb-line {
-    background: var(--white);
-    display: block;
-    height: 4px;
-    position: relative;
-    width: 40px;
-
-} /* Style span tag */
-
-.hamb-line::before,
-.hamb-line::after{
-    background: var(--white);
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all .2s ease-out;
-    width: 100%;
-}
-.hamb-line::before{
-    top: 12px;
-}
-.hamb-line::after{
-    top: -12px;
-}
-
-.side-menu {
-    display: none;
-}
-
 .right-menu {
     display: flex;
     justify-content: flex-end;
     width: 80%;
     margin-right: 40px;
     transition: max-height .5s ease-out;
+}
+
+#mobile-nav {
+    display: none;
+}
+
+#mobile-nav {
+    padding-right: 50px;
+    cursor: pointer;
 }
 
 .contact {
@@ -114,12 +94,6 @@ body {
     background-color: var(--black);
 }
 
-.creatives-container {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 1430px;
-}
 
 .main-heading {
     text-align: center;
@@ -394,8 +368,11 @@ body {
     .right-menu {
         display: none;
     }
-    .hamb {
+    #mobile-nav {
         display: block;
     }
-
+    .right-menu {
+        margin-right: auto;
+    }
 }
+
