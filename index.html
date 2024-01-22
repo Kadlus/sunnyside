@@ -11,12 +11,19 @@
 <body>
 <header>
   <div>
-    <img src="images/desktop/image-header.jpg" id="background-img" alt="bg">
+    <div class="creatives-container">
+      <img src="images/desktop/image-header.jpg" id="background-img" alt="bg">
+      <h1 class="main-heading">We are creatives</h1>
+      <a href="#scroll-here">
+        <img src="images/icon-arrow-down.svg" class="middle-arrow" alt="arrow">
+      </a>
+    </div>
   </div>
   <nav class="navbar">
     <div class="left-menu">
       <img src="images/logo.svg" alt="sunnyside">
     </div>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
     <div class="right-menu">
       <ul class="nav-links">
         <li class="nav-link">About</li>
@@ -25,16 +32,10 @@
         <li class="nav-link contact">Contact</li>
       </ul>
     </div>
-    <img src="images/icon-hamburger.svg" alt="mobile-menu" id="mobile-nav" class="hamburger-icon">
+    <label for="menu-toggle" class="menu-toggle">&#9776;</label>
   </nav>
 </header>
 <main>
-  <div class="creatives-container">
-    <h1 class="main-heading">We are creatives</h1>
-    <a href="#scroll-here">
-      <img src="images/icon-arrow-down.svg" class="middle-arrow" alt="arrow">
-    </a>
-  </div>
   <div class="band-container" id="scroll-here">
     <div class="band-left">
       <h2 class="second-heading">Transform your<br>brand</h2>
