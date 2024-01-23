@@ -12,6 +12,7 @@
 
 * {
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
 :root{
@@ -46,7 +47,7 @@ header {
 }
 
 .left-menu img {
-    width: 150px; /* Adjust the width as needed */
+    width: 150px;
 }
 
 .right-menu {
@@ -65,7 +66,13 @@ header {
     margin-right: 20px;
     padding: 15px;
 }
-
+.nav-link a {
+    text-decoration: none;
+    color: var(--white);
+}
+.nav-link:hover > a {
+    color: var(--black)
+}
 .nav-link:hover {
     color: var(--black);
     cursor: pointer;
@@ -83,11 +90,10 @@ header {
     padding-right: 40px;
 }
 
-/* Hamburger Menu Styles */
 .menu-toggle {
     display: none;
     cursor: pointer;
-    order: -1; /* Move the toggle to the beginning for mobile layout */
+    order: -1;
 }
 
 .main-heading {
@@ -99,13 +105,8 @@ header {
     position: absolute;
     top: 30%;
     left: 50%;
+    width: 100%;
     transform: translate(-50%, -50%);
-}
-
-
-.creatives-container {
-    text-align: center;
-    position: relative;
 }
 
 .middle-arrow {
@@ -165,6 +166,7 @@ header {
 .desc {
     font-size: 24px;
     color: var(--grey);
+    padding: 10px;
     font-family: Barlow, 'sans-serif';
 }
 
@@ -173,8 +175,12 @@ header {
     font-weight: bold;
     text-transform: uppercase;
     position: relative;
+    cursor: pointer;
 }
 
+.learn-more:hover {
+    color: var(--grey);
+}
 .band-left .learn-more::before {
     content: "";
     position: absolute;
@@ -226,6 +232,7 @@ header {
     background-image: url("../images/desktop/image-graphic-design.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     height: 100%;
     display: flex;
     justify-content: flex-end;
@@ -237,6 +244,7 @@ header {
     background-image: url("../images/desktop/image-photography.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     height: 100%;
     display: flex;
     justify-content: flex-end;
@@ -265,14 +273,15 @@ header {
 .client-container {
     display: flex;
     justify-content: center;
-    padding: 100px;
+    padding: 20px;
 }
 
 .client-testamonial-heading {
     text-align: center;
     font-size: 42px;
     color: #7e7f82;
-    margin-top: 200px;
+    margin-top: 100px;
+    margin-bottom: 0;
 }
 
 .client-card {
@@ -290,6 +299,7 @@ header {
     margin-bottom: 70px;
     color: #7e7f82;
     line-height: 2;
+    font-size: 20px;
 }
 
 .client-name {
@@ -301,18 +311,23 @@ header {
 }
 
 .gallery {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0;
     width: 100%;
+    max-width: 100%;
 }
 
 .gallery-item {
-    width: 25%;
-    height: 100%;
+    vertical-align: top;
+    overflow: hidden;
 }
 
+
 .gallery-item img {
-    width: 100%;
     max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .sunny-side-logo-heading {
@@ -344,13 +359,18 @@ header {
 }
 
 .footer-link {
-    padding: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.footer-link a {
+    text-decoration: none;
     color: #2d7464;
     font-size: 18px;
 }
 
-.footer-link:hover {
-    color: var(--black)
+.footer-link:hover > a {
+    color: var(--black);
 }
 
 .social-icons {
@@ -367,16 +387,23 @@ header {
 
 .social-icons .fa:hover {
     color: var(--black);
+    cursor: pointer;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 767px) {
+
+}
+
+@media screen and (max-width: 1024px) {
+    .left-menu {
+        display: none;
+    }
     .right-menu {
         display: flex;
         flex-direction: column;
-        position: absolute;
-        top: 80px; /* Adjust the top position as needed */
+        top: 80px;
         right: 0;
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: #3ebfff;
         width: 100%;
         text-align: center;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -390,15 +417,16 @@ header {
     }
     .contact {
         background: none;
-        color: var(--black);
+        color: var(--grey);
     }
     .nav-link.contact:hover {
         background: none;
     }
-    .nav-link {
+    .nav-link > a {
         margin: 10px 20px;
+        color: var(--black)
     }
-    .nav-link:hover {
+    .nav-link:hover > a {
         color: var(--grey);
     }
     .nav-links {
@@ -408,6 +436,52 @@ header {
     .menu-toggle:checked + .right-menu {
         display: flex;
     }
+
+    .band-container, .stand-container,.design-photo-container {
+        flex-direction: column;
+    }
+
+    .band-container > div {
+        width: 100%;
+    }
+    .stand-container > div {
+        width: 100%;
+    }
+
+    .design-photo-container > div {
+        width: 100%;
+    }
+
+    .client-testamonial-heading {
+        margin-top: 50px;
+    }
+
+    .client-container {
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .client-card {
+        width: 90%;
+    }
+    .photography-heading, .graphic-heading, .desc {
+        color: var(--black);
+    }
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .gallery-item {
+        width: 100%;
+    }
+
+    .footer-links {
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
 
 
